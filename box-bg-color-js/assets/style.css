@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.boxes{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    width: 200px;
+    height: 200px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.bg-style{
+    background-color: aqua;
+}
+.bg-style-2{
+    background-color: rebeccapurple;
+}
+.bg-style-3{
+    background-color: red;
+}
+.bg-style-4{
+    background-color: yellowgreen;
+}

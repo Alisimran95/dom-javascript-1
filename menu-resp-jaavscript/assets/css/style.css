@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    background-color: black;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-list li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 25px;
+}
+.menu-list li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.menu-list li a:hover{
+    color: red;
+}
+.menu-btn{
+   position: relative;
+   top: 20px;
+   right: 20px;
+   width: 40px;
+   height: 30px;
+   opacity: 0;
+   visibility: hidden;
+   cursor: pointer;
+}
+
+.menu-btn::before{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 6px;
+   left: 0;
+   bottom: 2px;
+   background-color: white;
+   transition: all 0.3s ease-in-out;
+}
+#btn{
+   position: absolute;
+   width: 100%;
+   height: 6px;
+   left: 0;
+   bottom: 12px;
+   background-color: white;
+}
+.menu-btn::after{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 6px;
+   left: 0;
+   top: 2px;
+   background-color: white;
+}
+
+
+@media only screen and (max-width:767px) {
+    .menu-btn{
+        position: absolute;
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu-list {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 50px;
+        bottom: 0%;
+        text-align: center;
+        background-color: black;
+    }
+    .menu-list.active{
+        display: block;
+    }
+    .menu-list li{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+}
